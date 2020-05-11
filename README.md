@@ -3,7 +3,7 @@ This is my Latex Resume you can get it's glimpse here.
 
 ## Resume -  [`PDf resume`](https://www.sarthakj.me/assets/Sarthak_Resume.pdf)
 
-![Alt text](Assets/Sarthak_Resume.jpg?raw=true "Title")
+![Alt text](assets/Sarthak_Resume.jpg?raw=true "Title")
 
 ## Requirements and Compilation
 
