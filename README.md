@@ -1,5 +1,7 @@
 
-> This is my Latex Resume, you can get it's glimpse here.
+
+                                                  Details of the Project
+
 
 <p align = "center">
   
@@ -29,9 +31,15 @@
 </p >
 
 
-# Resumé 📄 -  [`PDF `](https://www.sarthakj.me/assets/Sarthak_Resume.pdf)
+
+ This is my Latex Resume, you can get it's glimpse here.
+
+# Resumé 📄 -  [`PDF`](https://www.sarthakj.me/assets/Sarthak_Resume.pdf)
 
 <br/>
+
+                                                       Image of the Resume
+
 
 ![Alt text](assets/Sarthak_Resume.jpg?raw=true "Title")
 
