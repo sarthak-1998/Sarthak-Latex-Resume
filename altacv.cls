@@ -114,10 +114,11 @@
 \RequirePackage{dashrule}
 \RequirePackage{multirow,tabularx}
 \RequirePackage{changepage}
+\usepackage{amssymb} 
 % \RequirePackage{marginfix}
 
 \setlength{\parindent}{0pt}
-\newcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.4pt}{1.0ex}}\smallskip}
+\newcommand{\divider}{\textcolor{body!50}{\hdashrule{\linewidth}{0.5pt}{1.0ex}}\smallskip}
 
 \newenvironment{fullwidth}{%
   \begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
@@ -193,7 +194,7 @@
   \textbf{\color{accent}#2}\par
   \smallskip}
   \ifstrequal{#3}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
-  \ifstrequal{#4}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.8em}#4}}}\par
+
   \smallskip\normalsize
 }
 
