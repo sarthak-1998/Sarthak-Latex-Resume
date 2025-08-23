@@ -107,7 +107,7 @@
 \usetikzlibrary{arrows}
 \RequirePackage[skins]{tcolorbox}
 \RequirePackage{enumitem}
-\setlist{leftmargin=*,labelsep=0.5em,nosep,itemsep=0.25\baselineskip,after=\vskip0.25\baselineskip}
+\setlist{leftmargin=*,labelsep=0.4em,nosep,itemsep=0.4\baselineskip,after=\vskip0.2\baselineskip}
 \setlist[itemize]{label=\itemmarker}
 \RequirePackage{graphicx}
 \RequirePackage{etoolbox}
@@ -134,7 +134,7 @@
 \newcommand{\orcidsymbol}{\aiOrcid}
 \newcommand{\mailsymbol}{\faEnvelope}
 
-\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\large #1}\hspace{0.3em}#2\hspace{1.9em}}}
+\newcommand{\printinfo}[2]{\mbox{\textcolor{accent}{\large #1}\hspace{0.4em}#2\hspace{1.8em}}}
 
 \newcommand{\name}[1]{\def\@name{#1}}
 \newcommand{\tagline}[1]{\def\@tagline{#1}}
@@ -178,7 +178,7 @@
   \bigskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\LARGE\bfseries\MakeUppercase{#2}}\\[-1ex]%
-  {\color{heading}\rule{\linewidth}{2pt}\par}\medskip
+  {\color{heading}\rule{\linewidth}{2.2pt}\par}\medskip
 }
 
 \newcommand{\cvsubsection}[1]{%
@@ -193,7 +193,7 @@
   \ifstrequal{#2}{}{}{
   \textbf{\color{accent}#2}\par
   \smallskip}
-  \ifstrequal{#3}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
+  \ifstrequal{#3}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.8em}#3}}}%
 
   \smallskip\normalsize
 }
@@ -212,7 +212,7 @@
 }
 
 \newcommand{\cvtag}[1]{%
-  \tikz[baseline]\node[anchor=base,draw=body!75,rounded corners,inner xsep=1ex,inner ysep =0.9ex,text height=1.5ex,text depth=.25ex]{#1};
+  \tikz[baseline]\node[anchor=base,draw=body!75,rounded corners,inner xsep=1.5ex,inner ysep =0.9ex,text height=1.5ex,text depth=.5ex]{#1};
 }
 
 \newcommand{\cvskill}[2]{%
