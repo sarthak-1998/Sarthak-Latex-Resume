@@ -152,8 +152,7 @@
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
 
 \def\@taglinetitle{Summary:} % empty by default
-\def\@taglinebody{Product Manager with 5+ years of experience spearheading B2C and B2B fintech, pharmatech, and edutech products. Proven track record in leading cross-functional teams to launch scalable API platforms and innovative consumer payment products at scale. Skilled in product strategy, data-driven experimentation, and leveraging LLM/AI technologies to improve user acquisition and engagement.}
-
+\def\@taglinebody{Product Manager with 5+ years of experience spearheading B2C and B2B fintech, pharmatech, and edutech products. Proven track record in leading cross-functional teams to launch scalable innovative consumer products and API platforms at scale. Skilled in data-driven experimentation and leveraging LLMs/AI technologies to improve user acquisition and engagement.}
 
 
 
