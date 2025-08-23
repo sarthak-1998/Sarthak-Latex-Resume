@@ -151,15 +151,26 @@
 
 \newcommand{\personalinfo}[1]{\def\@personalinfo{#1}}
 
+\def\@taglinetitle{Summary:} % empty by default
+\def\@taglinebody{Product Manager with 5+ years of experience spearheading B2C and B2B fintech, pharmatech, and edutech products. Proven track record in leading cross-functional teams to launch scalable API platforms and innovative consumer payment products at scale. Skilled in product strategy, data-driven experimentation, and leveraging LLM/AI technologies to improve user acquisition and engagement.}
+
+
+
+
 \newcommand{\makecvheader}{%
   \begingroup
     \ifdef{\@photodiameter}{\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}}{}%
     \raggedright\color{emphasis}%
     {\Huge\bfseries\MakeUppercase{\@name}\par}
     \medskip
-    {\large\bfseries\color{accent}\@tagline\par}
+  %  {\large\bfseries\color{accent}\@tagline\par}
+
+    {\large\bfseries\color{accent}\@taglinetitle}{\large\color{accent}\ \@taglinebody\par}
+    
     \medskip
-    {\footnotesize\bfseries\@personalinfo\par}
+    
+   {\footnotesize\bfseries\@personalinfo\par}
+
     \ifdef{\@photodiameter}{%
     \end{minipage}\hfill%
     \begin{minipage}{\@photodiameter}
@@ -187,15 +198,21 @@
 }
 
 % v1.1.4: fixes inconsistent font size
+%\newcommand{\cvevent}[4]{%
+ % {\Large\color{emphasis}#1\par}
+ %\large \ifstrequal{#2}{}{}{  \textbf{\color{accent}#2}\par
+  %\smallskip} \ifstrequal{#3}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.8em}#3}}}%
+
+  %\smallskip\normalsize
+%}
 \newcommand{\cvevent}[4]{%
   {\Large\color{emphasis}#1\par}
- \large
-  \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
-  \smallskip}
-  \ifstrequal{#3}{}{}{{\normalsize\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.8em}#3}}}%
-
-  \smallskip\normalsize
+  \noindent
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} ll}
+    \ifstrequal{#2}{}{~}{\textbf{\color{accent}#2}} & 
+    \ifstrequal{#3}{}{~}{{\normalsize\faCalendar\hspace{0.5em}#3}} \\
+  \end{tabular*}
+  \par\smallskip\normalsize
 }
 
 \newcommand{\cvachievement}[3]{%
@@ -206,11 +223,23 @@
   \smallskip
 }
 
-\newcommand{\cvproject}[1]{%
-  {\textbf{\color{accent}#1}\par}
+%\newcommand{\cvproject}[1]{%
+ % {\textbf{\color{accent}#1}\par}
+  %\smallskip\normalsize
+%}
+
+\newcommand{\cvproject}[4]{%
+  {\textbf{%
+    \if\relax\detokenize{#4}\relax
+      #1%
+    \else
+      \href{#4}{#1}%
+    \fi
+  }%
+  \hspace{0.5em}\textit{#2}\par}%
+  #3\par
   \smallskip\normalsize
 }
-
 \newcommand{\cvtag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=body!75,rounded corners,inner xsep=1.5ex,inner ysep =0.9ex,text height=1.5ex,text depth=.5ex]{#1};
 }
